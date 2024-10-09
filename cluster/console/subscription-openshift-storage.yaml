@@ -7,6 +7,12 @@ metadata:
   namespace: openshift-storage
 spec:
   channel: "stable-4.16"
+  config:
+    nodeSelector:
+      node-role.kubernetes.io/infra: ''
+    tolerations:
+      - key: node-role.kubernetes.io/infra
+        operator: Exists
   name: odf-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
