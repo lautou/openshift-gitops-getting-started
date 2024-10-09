@@ -11,6 +11,7 @@ spec:
     tolerations:
       - key: node-role.kubernetes.io/infra
         operator: Exists
+  installPlanApproval: Automatic
   name: servicemeshoperator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
