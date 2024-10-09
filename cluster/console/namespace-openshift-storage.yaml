@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '-1'
-    openshift.io/node-selector: "node-role.kubernetes.io/infra="
+    openshift.io/node-selector: "cluster.ocs.openshift.io/openshift-storage="
   name: openshift-storage
   labels:
     openshift.io/cluster-monitoring: "true"

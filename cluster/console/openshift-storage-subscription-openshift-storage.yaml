@@ -9,8 +9,9 @@ spec:
     nodeSelector:
       node-role.kubernetes.io/infra: ''
     tolerations:
-      - key: node-role.kubernetes.io/infra
-        operator: Exists
+      - key: node.ocs.openshift.io/storage
+        operator: Equal
+        value: "true"
   name: odf-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
