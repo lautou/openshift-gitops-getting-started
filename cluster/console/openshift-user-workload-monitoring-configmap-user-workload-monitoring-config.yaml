@@ -5,7 +5,20 @@ metadata:
   namespace: openshift-user-workload-monitoring
 data:
   config.yaml: |
-    thanosRuler:
+    alertmanagerMain:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: gp3-csi
+          resources:
+            requests:
+              storage: 10Gi
+    prometheus:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: gp3-csi
+          resources:
+            requests:
+              storage: 40Gi
       nodeSelector:
         node-role.kubernetes.io/infra: ""
       tolerations:
@@ -17,13 +30,7 @@ data:
       tolerations:
       - operator: Exists
         key: node-role.kubernetes.io/infra
-    prometheus:
-      volumeClaimTemplate:
-        spec:
-          storageClassName: gp2-csi
-          resources:
-            requests:
-              storage: 40Gi
+    thanosRuler:
       nodeSelector:
         node-role.kubernetes.io/infra: ""
       tolerations:
