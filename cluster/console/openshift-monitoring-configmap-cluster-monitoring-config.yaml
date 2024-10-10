@@ -18,19 +18,19 @@ data:
       tolerations:
       - operator: Exists
         key: node-role.kubernetes.io/infra
-    grafana:
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
-      tolerations:
-      - operator: Exists
-        key: node-role.kubernetes.io/infra
-    k8sPrometheusAdapter:
-      nodeSelector:
-        node-role.kubernetes.io/infra: ""
-      tolerations:
-      - operator: Exists
-        key: node-role.kubernetes.io/infra
     kubeStateMetrics:
+      nodeSelector:
+        node-role.kubernetes.io/infra: ""
+      tolerations:
+      - operator: Exists
+        key: node-role.kubernetes.io/infra
+    metricsServer:
+      nodeSelector:
+        node-role.kubernetes.io/infra: ""
+      tolerations:
+      - operator: Exists
+        key: node-role.kubernetes.io/infra
+    monitoringPlugin:
       nodeSelector:
         node-role.kubernetes.io/infra: ""
       tolerations:
