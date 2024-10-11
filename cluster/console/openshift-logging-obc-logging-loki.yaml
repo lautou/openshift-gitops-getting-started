@@ -4,10 +4,10 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '2'
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-  name: loki-logging
+  name: logging-loki
   namespace: openshift-logging
 spec:
   additionalConfig:
     bucketclass: noobaa-default-bucket-class
-  bucketName: loki-logging
+  bucketName: logging-loki-obc
   storageClassName: openshift-storage.noobaa.io
