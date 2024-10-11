@@ -17,7 +17,6 @@ spec:
       type: s3
     tls:
       caName: openshift-service-ca.crt
-      caKey: service-ca.crt
   storageClassName: gp3-csi
   template:
     compactor: 
