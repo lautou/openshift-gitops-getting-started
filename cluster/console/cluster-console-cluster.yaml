@@ -2,7 +2,7 @@ apiVersion: operator.openshift.io/v1
 kind: Console
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: '1'
+    argocd.argoproj.io/sync-wave: '2'
   name: cluster
 spec:
   plugins:
@@ -10,3 +10,4 @@ spec:
     - odf-console
     - gitops-plugin
     - logging-view-plugin
+    - netobserv-plugin
