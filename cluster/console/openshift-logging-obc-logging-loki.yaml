@@ -9,5 +9,5 @@ metadata:
 spec:
   additionalConfig:
     bucketclass: noobaa-default-bucket-class
-  bucketName: logging-loki-obc
+  bucketName: logging-loki
   storageClassName: openshift-storage.noobaa.io
