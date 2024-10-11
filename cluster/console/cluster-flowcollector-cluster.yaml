@@ -1,6 +1,9 @@
 apiVersion: flows.netobserv.io/v1beta2
 kind: FlowCollector
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    argocd.argoproj.io/sync-wave: '2'
   name: cluster
 spec:
   loki:
